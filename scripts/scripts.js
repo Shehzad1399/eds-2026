@@ -215,3 +215,9 @@ async function loadPage() {
 }
 
 loadPage();
+
+(async function loadDa() {
+  if (!new URL(window.location.href).searchParams.has('dapreview')) return;
+  const { default: daPreview } = await import('https://da.live/scripts/dapreview.js');
+  daPreview(loadPage);
+}());

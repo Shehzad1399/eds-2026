@@ -1,0 +1,39 @@
+.eds-enablement-block > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eds-enablement-block > div + div {
+  margin-top: 24px;
+}
+
+.eds-enablement-block > div > div {
+  min-width: 0;
+}
+
+.eds-enablement-block .eds-enablement-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eds-enablement-block.session-two {
+  border: 1px solid var(--link-color);
+}
+
+.eds-enablement-block.session-practice {
+  padding: 24px;
+  background: var(--light-color);
+}
+
+@media (width >= 900px) {
+  .eds-enablement-block > div {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .eds-enablement-block > div > div {
+    flex: 1 1 240px;
+  }
+}
