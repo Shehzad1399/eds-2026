@@ -218,6 +218,7 @@ loadPage();
 
 (async function loadDa() {
   if (!new URL(window.location.href).searchParams.has('dapreview')) return;
+  // eslint-disable-next-line import/no-unresolved
   const { default: daPreview } = await import('https://da.live/scripts/dapreview.js');
   daPreview(loadPage);
 }());
